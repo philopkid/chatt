@@ -132,7 +132,7 @@ io.on("connection", (socket) => {
 
 
 //API to fetch chat history
-app.get("/message/:room", async(req, res) => {
+app.get("/messages/:room", async(req, res) => {
 	const messages = await Message.find({ room: req.params.room});
 	res.json(messages);
 });
